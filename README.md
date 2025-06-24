@@ -53,7 +53,7 @@ Esta es una solución pensada para fanáticos del básquet y apostadores informa
 - LinkedIn - [Alejandro Thon](https://www.linkedin.com/in/alejandrothon/)
 - Email - alejandro.thon.j@gmail.com
 
-# Edge Hoops
+# Edge Hoops <a id="english"></a>
 
 ## Table of Contents
 - [Overview](#overview)
