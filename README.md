@@ -15,7 +15,21 @@ Esta es una solución pensada para fanáticos del básquet y apostadores informa
 
 ### Proyecto
 <!-- [en proceso] -->
-<!-- Desglozar reglas de negocio y funcionalidades esperadas -->
+
+#### 📌 El usuario debería poder:
+
+- Ver los próximos partidos con información básica.
+- Consultar tendencias como el récord Over/Under y el porcentaje de cobertura en casa/visita.
+- Explorar el **historial head-to-head** entre dos equipos.
+- Visualizar el rendimiento reciente mediante **gráficas interactivas**.
+- Marcar equipos favoritos para acceso rápido.
+- Disfrutar de un diseño limpio y adaptable a todo tipo de pantallas.
+
+> 🔒 En una versión premium futura:
+> 
+> - El usuario podrá acceder a **resúmenes generados por IA**, insights inteligentes y análisis de tendencias con un wrapper propio.
+>
+> - Esta funcionalidad estará disponible mediante **modelo de suscripción**.
 ## Mi proceso
 
 ### Desarrollado con
@@ -26,6 +40,8 @@ Esta es una solución pensada para fanáticos del básquet y apostadores informa
 - CSS
 - React
 - SWC
+- Tailwindcss
+- React-router
 
 ### Instalación
 
@@ -67,8 +83,27 @@ Esta es una solución pensada para fanáticos del básquet y apostadores informa
 This is a solution for data-driven basketball fans and informed bettors looking to better understand NBA matchups through real statistics. The goal is to provide meaningful insights in a clean and interactive interface — without simulating bets or promoting gambling.
 
 ### Project
-<!-- [in progress] -->
-<!-- Break down business rules and expected features -->
+
+#### 📌 Users should be able to:
+View upcoming NBA games with basic info (teams, spread, over/under lines).
+
+- See trends like Over/Under record and Home/Away cover %.
+
+- Explore **head-to-head history** between two teams.
+
+- Visualize recent performance with **interactive charts**.
+
+- Mark favorite teams for quick access.
+
+- Access a clean layout optimized for all screen sizes.
+
+- Experience proper hover/focus states across UI elements.
+
+> 🔒 In a future premium version:
+>
+> - Users will access **AI-powered summaries**, matchup insights, and trend detection via a custom LLM wrapper.
+>
+> - This part will be locked behind a **subscription model** for advanced users.
 
 ## My Process
 
@@ -80,6 +115,8 @@ This is a solution for data-driven basketball fans and informed bettors looking 
 - CSS
 - React
 - SWC
+- Tailwindcss
+- React-router
 
 ### Installation
 
