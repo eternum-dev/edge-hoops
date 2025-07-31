@@ -9,10 +9,10 @@ interface TextProps {
 }
 
 const baseStyle: Record<TextSize, string> = {
-  s: "font-inter font-medium text-b5 leading-b5",
-  m: "font-inter font-medium text-b3 leading-b3",
-  l: "font-inter font-medium text-b1 leading-b1",
-  xl: "font-inter font-medium text-h7 leading-h7",
+  s: "h-fit font-inter font-medium text-b5 leading-b5",
+  m: "h-fit font-inter font-medium text-b3 leading-b3",
+  l: "h-fit font-inter font-medium text-b1 leading-b1",
+  xl: "h-fit font-inter font-medium text-h7 leading-h7",
 };
 
 const colorStyles: Record<TextColor, string> = {
