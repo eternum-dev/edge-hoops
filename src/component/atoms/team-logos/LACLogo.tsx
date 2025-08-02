@@ -1,9 +1,18 @@
-export const LACLogo = () => {
+interface LACLogoProps {
+  size?: number;
+  className?: string;
+}
+
+export const LACLogo: React.FC<LACLogoProps> = ({
+  size = 32,
+  className = "",
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="122"
-      height="122"
+      width={size}
+      height={size}
+      className={className}
       fill="none"
       viewBox="0 0 122 122"
     >

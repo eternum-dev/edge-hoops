@@ -1,9 +1,18 @@
-export const SACLogo = () => {
+interface SACLogoProps {
+  size?: number;
+  className?: string;
+}
+
+export const SACLogo: React.FC<SACLogoProps> = ({
+  size = 32,
+  className = "",
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="122"
-      height="140"
+      width={size}
+      height={size}
+      className={className}
       fill="none"
       viewBox="0 0 122 140"
     >

@@ -1,11 +1,20 @@
-export const CHILogo = () => {
+interface CHILogoProps {
+  size?: number;
+  className?: string;
+}
+
+export const CHILogo: React.FC<CHILogoProps> = ({
+  className = "",
+  size = "",
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="123"
-      height="124"
+      width={size}
+      height={size}
       fill="none"
       viewBox="0 0 123 124"
+      className={className}
     >
       <g clipPath="url(#clip0_38_1029)">
         <path

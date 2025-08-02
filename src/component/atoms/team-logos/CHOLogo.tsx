@@ -1,9 +1,18 @@
-export const CHOLogo = () => {
+interface CHOLogoProps {
+  size?: number;
+  className?: string;
+}
+
+export const CHOLogo: React.FC<CHOLogoProps> = ({
+  className = "",
+  size = "",
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="122"
-      height="119"
+      width={size}
+      height={size}
+      className={className}
       fill="none"
       viewBox="0 0 122 119"
     >

@@ -1,9 +1,18 @@
-export const PHILogo = () => {
+interface PHILogoProps {
+  size?: number;
+  className?: string;
+}
+
+export const PHILogo: React.FC<PHILogoProps> = ({
+  size = 32,
+  className = "",
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="123"
-      height="123"
+      width={size}
+      height={size}
+      className={className}
       fill="none"
       viewBox="0 0 123 123"
     >

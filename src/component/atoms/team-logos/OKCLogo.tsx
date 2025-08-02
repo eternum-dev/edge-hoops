@@ -1,9 +1,18 @@
-export const OKCLogo = () => {
+interface OKCLogoProps {
+  size?: number;
+  className?: string;
+}
+
+export const OKCLogo: React.FC<OKCLogoProps> = ({
+  size = 32,
+  className = "",
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="123"
-      height="113"
+      width={size}
+      height={size}
+      className={className}
       fill="none"
       viewBox="0 0 123 113"
     >

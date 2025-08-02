@@ -1,9 +1,18 @@
-export const GSWLogo = () => {
+interface GSWLogoProps {
+  size?: number;
+  className?: string;
+}
+
+export const GSWLogo: React.FC<GSWLogoProps> = ({
+  size = 32,
+  className = "",
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="122"
-      height="150"
+      width={size}
+      height={size}
+      className={className}
       fill="none"
       viewBox="0 0 122 150"
     >

@@ -1,11 +1,20 @@
-export const BOSLogo = () => {
+interface BOSLogoProps {
+  size?: number;
+  className?: string;
+}
+
+export const BOSLogo: React.FC<BOSLogoProps> = ({
+  size = 32,
+  className = "",
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="122"
-      height="136"
+      width={size}
+      height={size}
       fill="none"
       viewBox="0 0 122 136"
+      className={className}
     >
       <g clipPath="url(#clip0_38_1018)">
         <path
