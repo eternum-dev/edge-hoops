@@ -1,42 +1,12 @@
+import type { ShortTeamNames } from "../../types/nba";
 import * as TeamsIcon from "./team-logos";
 
-type TeamLogoNames =
-  | "ATL"
-  | "BOS"
-  | "BRK"
-  | "CHI"
-  | "CHO"
-  | "CLE"
-  | "DAL"
-  | "DEN"
-  | "DET"
-  | "GSW"
-  | "HOU"
-  | "IND"
-  | "LAC"
-  | "LAL"
-  | "MEM"
-  | "MIA"
-  | "MIL"
-  | "MIN"
-  | "NOP"
-  | "NYK"
-  | "OKC"
-  | "ORL"
-  | "PHI"
-  | "PHO"
-  | "POR"
-  | "SAC"
-  | "SAS"
-  | "TOT"
-  | "UTA"
-  | "WAS";
 
 type TeamLogoSize = "small" | "medium" | "full";
-type TeamLogoComponentKeys = `${TeamLogoNames}Logo`;
+type TeamLogoComponentKeys = `${ShortTeamNames}Logo`;
 
 interface TeamLogoProps {
-  team?: TeamLogoNames;
+  team?: ShortTeamNames;
   size?: TeamLogoSize;
 }
 const baseSizeTeam: Record<TeamLogoSize, number> = {
