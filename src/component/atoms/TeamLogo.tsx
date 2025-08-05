@@ -1,18 +1,19 @@
 import type { ShortTeamNames } from "../../types/nba";
 import * as TeamsIcon from "./team-logos";
 
-
-type TeamLogoSize = "small" | "medium" | "full";
+type TeamLogoSize = "verySmall" | "small" | "medium" | "full";
 type TeamLogoComponentKeys = `${ShortTeamNames}Logo`;
 
 interface TeamLogoProps {
   team?: ShortTeamNames;
   size?: TeamLogoSize;
 }
+
 const baseSizeTeam: Record<TeamLogoSize, number> = {
   full: 96,
   medium: 64,
   small: 32,
+  verySmall: 24,
 };
 
 export const TeamLogo: React.FC<TeamLogoProps> = ({
