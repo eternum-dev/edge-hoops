@@ -1,9 +1,12 @@
+import { Text } from "./Text";
+
 type GraphBarColor = "primary" | "secondary";
 
 interface GraphBarProps {
   className?: string;
   color?: GraphBarColor;
   height?: string;
+  value: string | number;
 }
 
 const BaseStyled: Record<GraphBarColor, string> = {
@@ -16,8 +19,16 @@ const BaseStyled: Record<GraphBarColor, string> = {
 export const GraphBar: React.FC<GraphBarProps> = ({
   className = "",
   color = "primary",
-  height ,
+  height,
+  value = "1000",
 }) => {
-
-  return <div style={{ height: height }} className={`${className}${BaseStyled[color]}`}></div>;
+  return (
+    <div className="flex flex-col w-full h-full items-center">
+      <div
+        style={{ height: height }}
+        className={`${className}${BaseStyled[color]}`}
+      ></div>
+      <Text>{value}</Text>
+    </div>
+  );
 };
