@@ -42,7 +42,7 @@ export const TeamScore: React.FC<TeamScoreProps> = ({
 
   return (
     <div
-      className={`flex h-fit p-2 justify-between items-center ${positionStyles[positionLogo]}`}
+      className={`w-full flex h-fit p-2 justify-between items-center ${positionStyles[positionLogo]}`}
     >
       <Strong color={colorText} size={sizeStyles[size].text}>
         {score}
