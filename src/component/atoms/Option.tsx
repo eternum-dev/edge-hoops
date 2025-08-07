@@ -1,11 +1,13 @@
 import { useState } from "react";
+import type { ShortTeamNames } from "../../types/nba";
+import { TeamLogo } from "./TeamLogo";
 
 type OptionTextPosition = "left" | "right";
 
 interface OptionProps {
   textPosition?: OptionTextPosition;
   className?: string;
-  icon?: string;
+  icon?: ShortTeamNames;
   children?: React.ReactNode;
   disable?: boolean;
 }
@@ -23,7 +25,7 @@ const baseStyles: Record<OptionTextPosition, string> = {
 export const Option: React.FC<OptionProps> = ({
   textPosition = "left",
   className = "",
-  icon = "img",
+  icon = "BOS",
   children = "Option",
   disable = false,
 }) => {
@@ -37,7 +39,7 @@ export const Option: React.FC<OptionProps> = ({
       <span className="font-inter font-medium text-b2 leading-b2">
         {children}
       </span>
-      {icon && icon}
+      {icon && <TeamLogo size="small" team={icon}/>}
     </div>
   );
 };
