@@ -16,6 +16,6 @@ export const Divider: React.FC<DividerProps> = ({
   size = "s",
 }) => {
   return (
-    <div className={`w-full  bg-neutral-1000 my-auto mx-1 ${sizeStyled[size]} ${className}`}></div>
+    <div className={`w-[35px]  bg-neutral-1000 my-auto mx-1 ${sizeStyled[size]} ${className}`}></div>
   );
 };
