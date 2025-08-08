@@ -1,24 +1,26 @@
-type TableCellType = "header" | "body";
-type TableCellContentType = "text" | "date" | "team";
+import type { CellContentType, CellType } from "../../types";
+import type { ShortTeamNames } from "../../types/nba";
+import { TeamLogo } from "./TeamLogo";
 
 interface TableCellProps {
-  cellType?: TableCellType;
-  contentType?: TableCellContentType;
+  cellType?: CellType;
+  contentType?: CellContentType;
   className?: string;
   children?: React.ReactNode;
-  icon?: string;
+  icon?: ShortTeamNames | undefined;
 }
 
-const baseStyled: Record<TableCellType, string> = {
-  body: "w-fit h-fit px-2 py-1 text-b1 font-inter font-medium leading-b1 text-neutral-1000 bg-neutral-100",
-  header:
-    "w-fit h-fit px-2 py-1 text-b1 font-inter font-medium leading-b1 text-neutral-100 bg-secondary-300",
+const baseStyles = `text-b1 font-medium leading-b1`;
+
+const cellTypeStyles: Record<CellType, string> = {
+  body: "w-fit h-fit px-2 py-1 text-neutral-1000 bg-neutral-100 flex",
+  header: "w-fit h-fit px-2 py-1 text-neutral-100 bg-secondary-300",
 };
 
-const defaultContent: Record<TableCellContentType, string> = {
-  date: "date",
-  team: "team",
-  text: "text",
+const contentTypeStyles: Record<CellContentType, string> = {
+  date: "font-oswald",
+  team: "font-inter",
+  text: "font-inter",
 };
 
 export const TableCell: React.FC<TableCellProps> = ({
@@ -26,13 +28,16 @@ export const TableCell: React.FC<TableCellProps> = ({
   contentType = "text",
   className = "",
   children = "",
-  icon,
+  icon = "ATL",
 }) => {
-  children = contentType === "team" ? "np" : defaultContent[contentType];
+  const isTypeTeamBody: boolean = contentType === "team" && cellType === "body";
+  children = isTypeTeamBody ? icon : children;
 
   return (
-    <div className={`${className} ${baseStyled[cellType]}`}>
-      {children} {icon && icon}
+    <div
+      className={`${className} ${cellTypeStyles[cellType]} ${contentTypeStyles[contentType]} ${baseStyles}`}
+    >
+      {children} {isTypeTeamBody && <TeamLogo size={"verySmall"} team={icon} />}
     </div>
   );
 };
