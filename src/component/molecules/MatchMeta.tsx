@@ -1,3 +1,4 @@
+import type { ShortTeamNames, TeamLogoSize } from "../../types";
 import { Date, TeamLogo, Text, type DateSize, type TextSize } from "../atoms";
 
 type MatchMetaTextColor = "white" | "black";
@@ -6,6 +7,9 @@ type MatchMetaSize = "small" | "full";
 interface MatchMetaProps {
   textColor?: MatchMetaTextColor;
   size?: MatchMetaSize;
+  stadium: string;
+  date: string;
+  winnerTeamCode: ShortTeamNames;
 }
 
 const textSizeStyles: Record<MatchMetaSize, TextSize> = {
@@ -18,21 +22,37 @@ const dateSizeStyles: Record<MatchMetaSize, DateSize> = {
   full: "m",
 };
 
+const teamLogoSizeStyles: Record<MatchMetaSize, TeamLogoSize> = {
+  small: "small",
+  full: "medium",
+};
+
 export const MatchMeta: React.FC<MatchMetaProps> = ({
   textColor = "black",
   size = "small",
+  stadium,
+  date,
+  winnerTeamCode,
 }) => {
   return (
-    <div className="flex gap-1 items-center w-full justify-between py-0.5 px-2 bg-neutral-700">
+    <div className="grid grid-cols-5 gap-1 items-center w-full justify-between py-0.5 px-2">
       <Text color={textColor} size={textSizeStyles[size]}>
-        equipo
+        ganador
       </Text>
-      <TeamLogo  size="small" team="CHI"/>
-      <Date textColor={textColor} size={dateSizeStyles[size]}>
-        01/07/25
+      <TeamLogo size={teamLogoSizeStyles[size]} team={winnerTeamCode} />
+      <Date
+        textColor={textColor}
+        size={dateSizeStyles[size]}
+        className="text-center"
+      >
+        {date}
       </Date>
-      <Text color={textColor} size={textSizeStyles[size]}>
-        estadio
+      <Text
+        color={textColor}
+        size={textSizeStyles[size]}
+        className="col-span-2 text-end"
+      >
+        {stadium}
       </Text>
     </div>
   );
