@@ -1,5 +1,4 @@
-type TextSize = "s" | "m" | "l" | "xl";
-type TextColor = "black" | "white";
+import type { TextColor, TextSize } from "../../types";
 
 interface TextProps {
   size?: TextSize;
