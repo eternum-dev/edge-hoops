@@ -1,5 +1,5 @@
-import type { DateSize } from "../../types";
-import type { TextColor } from "./Text";
+import type { DateSize, TextColor } from "../../types";
+
 
 interface DateProps {
   size?: DateSize;
