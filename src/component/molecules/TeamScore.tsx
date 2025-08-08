@@ -1,26 +1,24 @@
+import type { MoleculesSize, PositionLogo, TextColor } from "../../types";
 import type { ShortTeamNames } from "../../types/nba";
 import { Strong, TeamLogo, Text } from "../atoms";
 
-type TeamScorePositionLogo = "left" | "right";
-type TeamScoreColorText = "black" | "white";
-type TeamScoreSize = "small" | "full";
 type SizeStylesTypes = { text: "m" | "l"; logo: "small" | "medium" };
 
 interface TeamScoreProps {
-  positionLogo?: TeamScorePositionLogo;
-  colorText?: TeamScoreColorText;
-  size?: TeamScoreSize;
+  positionLogo?: PositionLogo;
+  colorText?: TextColor;
+  size?: MoleculesSize;
   score?: string | number;
   teamName?: string;
   team: ShortTeamNames;
 }
 
-const positionStyles: Record<TeamScorePositionLogo, string> = {
+const positionStyles: Record<PositionLogo, string> = {
   left: "flex-row-reverse",
   right: "flex-row",
 };
 
-const sizeStyles: Record<TeamScoreSize, SizeStylesTypes> = {
+const sizeStyles: Record<MoleculesSize, SizeStylesTypes> = {
   full: {
     text: "l",
     logo: "medium",
@@ -39,10 +37,9 @@ export const TeamScore: React.FC<TeamScoreProps> = ({
   teamName = "Atlanta Hawks's",
   team = "ATL",
 }) => {
-
   return (
     <div
-      className={`w-full flex h-fit p-2 justify-between items-center ${positionStyles[positionLogo]}`}
+      className={`w-full flex h-fit gap-1 justify-between items-center ${positionStyles[positionLogo]}`}
     >
       <Strong color={colorText} size={sizeStyles[size].text}>
         {score}
