@@ -1,21 +1,30 @@
-type DividerSize = "s" | "m" | "l";
+import type { DividerHeigth, NeutralColor } from "../../types";
 
 interface DividerProps {
   className?: string;
-  size?: DividerSize;
+  size?: DividerHeigth;
+  color?: NeutralColor;
 }
 
-const sizeStyled: Record<DividerSize, string> = {
+const sizeStyles: Record<DividerHeigth, string> = {
   l: "h-[3px]",
   m: "h-[2px]",
   s: "h-[1px]",
 };
 
+const colorStyles: Record<NeutralColor, string> = {
+  black: "bg-neutral-1000",
+  white: "bg-neutral-100",
+};
+
 export const Divider: React.FC<DividerProps> = ({
   className = "",
   size = "s",
+  color = "black",
 }) => {
   return (
-    <div className={`w-[35px]  bg-neutral-1000 my-auto mx-1 ${sizeStyled[size]} ${className}`}></div>
+    <div
+      className={`w-[35px]  my-auto mx-1 ${sizeStyles[size]} ${colorStyles[color]} ${className}`}
+    ></div>
   );
 };
