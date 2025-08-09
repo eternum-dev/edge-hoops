@@ -1,17 +1,17 @@
-type ColorBoxTypes = "orange" | "blue";
+import type { TypeColor } from "../../types";
 
 interface ScuareColorProps {
-  colorBox: ColorBoxTypes;
+  colorBox: TypeColor;
   className?: string;
 }
 
-const colorBoxStyles: Record<ColorBoxTypes, string> = {
-  blue: "bg-secondary-300",
-  orange: "bg-primary-300",
+const colorBoxStyles: Record<TypeColor, string> = {
+  secondary: "bg-secondary-300",
+  primary: "bg-primary-300",
 };
 
 export const ScuareColor: React.FC<ScuareColorProps> = ({
-  colorBox = "blue",
+  colorBox = "secondary",
   className = "",
 }) => {
   return (
