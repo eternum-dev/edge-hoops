@@ -1,6 +1,5 @@
 import type { DateSize, TextColor } from "../../types";
 
-
 interface DateProps {
   size?: DateSize;
   className?: string;
