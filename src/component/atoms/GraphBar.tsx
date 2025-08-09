@@ -1,15 +1,14 @@
+import type { TypeColor } from "../../types";
 import { Text } from "./Text";
-
-type GraphBarColor = "primary" | "secondary";
 
 interface GraphBarProps {
   className?: string;
-  color?: GraphBarColor;
+  color?: TypeColor;
   height?: string;
   value: string | number;
 }
 
-const BaseStyled: Record<GraphBarColor, string> = {
+const BaseStyled: Record<TypeColor, string> = {
   primary:
     "w-full max-w-[35px] h-full rounded-2xs bg-primary-300 drop-shadow-neutral-1000 drop-shadow-(--shadow-1) ",
   secondary:
