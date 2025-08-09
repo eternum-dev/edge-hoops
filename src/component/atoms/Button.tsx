@@ -1,20 +1,19 @@
-type ButtonSize = "fit" | "max";
-type ButtonColor = "primary" | "secondary";
+import type { TypeColor, WidthSize } from "../../types";
 
 interface ButtonProps {
-  size?: ButtonSize;
-  color?: ButtonColor;
+  size?: WidthSize;
+  color?: TypeColor;
   className?: string;
   children: React.ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const baseStyles: Record<ButtonSize, string> = {
+const baseStyles: Record<WidthSize, string> = {
   fit: "rounded-2xs font-inter font-regular leading-b3 text-b3 pt-(--spacing-2) pb-(--spacing-2) pr-(--spacing-4) pl-(--spacing-4) h-min",
   max: "rounded-2xs font-inter font-regular leading-b3 text-b3 pt-(--spacing-2) pb-(--spacing-2) pr-(--spacing-4) pl-(--spacing-4) h-full max-h-[45px]",
 };
 
-const colorStyles: Record<ButtonColor, string> = {
+const colorStyles: Record<TypeColor, string> = {
   primary:
     "bg-primary-300 text-neutral-100 hover:bg-primary-400 active:bg-primary-200 disabled:bg-neutral-300 disabled:text-neutral-900",
   secondary:
