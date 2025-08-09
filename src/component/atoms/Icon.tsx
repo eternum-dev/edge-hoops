@@ -1,8 +1,5 @@
+import type { IconComponentKeys, IconNames, IconSize } from "../../types";
 import * as Icons from "./icons";
-
-type IconNames = "Arrow" | "Fire";
-type IconSize = "small" | "medium" | "full";
-type IconComponentKeys = `${IconNames}Icon`;
 
 interface IconProps {
   icon?: IconNames;
