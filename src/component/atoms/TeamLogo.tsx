@@ -1,7 +1,7 @@
+import type { TeamLogoSize } from "../../types";
 import type { ShortTeamNames } from "../../types/nba";
 import * as TeamsIcon from "./team-logos";
 
-type TeamLogoSize = "verySmall" | "small" | "medium" | "full";
 type TeamLogoComponentKeys = `${ShortTeamNames}Logo`;
 
 interface TeamLogoProps {
