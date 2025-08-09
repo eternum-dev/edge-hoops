@@ -1,13 +1,12 @@
-type StrongSize = "s" | "m" | "l";
-type StrongColor = "white" | "black";
+import type { StrongSize, TextColor } from "../../types";
 
 interface StrongProps {
   size?: StrongSize;
-  color?: StrongColor;
+  color?: TextColor;
   children: React.ReactNode;
   className?: string;
 }
-const colorStyles: Record<StrongColor, string> = {
+const colorStyles: Record<TextColor, string> = {
   black: "text-neutral-1000",
   white: "text-neutral-100",
 };
