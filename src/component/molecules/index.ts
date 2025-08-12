@@ -1,6 +1,6 @@
 export * from './ColumTable';
 export * from './Definition';
-export * from './DropDownMenu';
+export * from './DropDownSelect';
 export * from './GraphQuarter';
 export * from './ListOption';
 export * from './MatchMeta';
