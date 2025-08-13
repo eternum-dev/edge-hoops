@@ -15,3 +15,20 @@ export interface GameData {
   date: string;
   winnerTeamCode: ShortTeamNames;
 }
+
+export interface StatItem {
+  title: string;
+  value: number | string;
+}
+
+export interface TeamStatsData {
+  logoCode: ShortTeamNames;
+  statsLeft: StatItem[];
+  statsRight: StatItem[];
+}
+
+export interface DropDownOptions {
+  team: ShortTeamNames;
+  label: string;
+}
+
