@@ -8,10 +8,10 @@ interface TitleProps {
 }
 
 const baseStyles: Record<TitleTagType, string> = {
-  h1: "text-h1 leading-h1 font-bold",
-  h2: "text-h4 leading-h4 font-bold",
-  h3: "text-h5 leading-h5 font-bold",
-  h4: "text-h7 leading-h7 font-medium",
+  h1: "text-h1 leading-h1 font-bold font-oswald",
+  h2: "text-h4 leading-h4 font-bold font-oswald",
+  h3: "text-h5 leading-h5 font-bold font-oswald",
+  h4: "text-h7 leading-h7 font-medium font-oswald",
 };
 
 const colorStyles: Record<TextColor, string> = {
