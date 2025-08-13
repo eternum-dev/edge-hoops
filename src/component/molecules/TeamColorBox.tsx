@@ -13,13 +13,13 @@ export const TeamColorBox: React.FC<TeamColorBoxProps> = ({
   return (
     <div className="flex px-2 py-1 gap-2">
       <div className="flex gap-1">
-        <ScuareColor colorBox="orange" />
+        <ScuareColor colorBox="primary" />
         <TeamLogo size="verySmall" team={leftTeam} />
       </div>
       <Divider className="w-[16px]!" />
       <div className="flex gap-1">
         <TeamLogo size="verySmall" team={rightTeam} />
-        <ScuareColor colorBox="blue" />
+        <ScuareColor colorBox="secondary" />
       </div>
     </div>
   );
