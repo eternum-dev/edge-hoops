@@ -1,18 +1,16 @@
-import { Strong, Text, type TextColor } from "../atoms";
-
-type StatBoxTextPosition = "left" | "rigth";
-type StatBoxColor = "white" | "blue";
+import type { StatBoxColor, StatValue, TextColor, TextPosition } from "../../types";
+import { Strong, Text } from "../atoms";
 
 interface StatBoxProps {
-  textPosition?: StatBoxTextPosition;
+  textPosition?: TextPosition;
   color?: StatBoxColor;
   title?: string;
-  value?: number | string;
+  value?: StatValue;
 }
 
-const textPositionStyles: Record<StatBoxTextPosition, string> = {
+const textPositionStyles: Record<TextPosition, string> = {
   left: "flex-row",
-  rigth: "flex-row-reverse",
+  right: "flex-row-reverse",
 };
 
 const colorStyles: Record<StatBoxColor, string> = {
