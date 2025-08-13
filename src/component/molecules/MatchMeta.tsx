@@ -1,5 +1,5 @@
-import type { ShortTeamNames, TeamLogoSize } from "../../types";
-import { Date, TeamLogo, Text, type DateSize, type TextSize } from "../atoms";
+import type { DateSize, ShortTeamNames, TeamLogoSize, TextSize } from "../../types";
+import { Date, TeamLogo, Text } from "../atoms";
 
 type MatchMetaTextColor = "white" | "black";
 type MatchMetaSize = "small" | "full";
