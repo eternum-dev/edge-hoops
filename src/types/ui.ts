@@ -1,3 +1,5 @@
+import type { ShortTeamNames } from "./nba";
+
 // text
 export type TextColor = "white" | "black";
 export type TextSize = "s" | "m" | "l" | "xl";
@@ -36,7 +38,12 @@ export type TitleTagType = "h1" | "h2" | "h3" | "h4";
 // component
 export type MoleculesSize = "small" | "full";
 export type WidthSize = "fit" | "max";
+export type ArrayListType = {
+  team: ShortTeamNames;
+  label: string;
+};
 
+export type SizeStylesTypes = { text: "m" | "l"; logo: "small" | "medium" };
 // statsBox
 export type StatBoxColor = "white" | "blue";
 
