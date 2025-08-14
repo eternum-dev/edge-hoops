@@ -2,7 +2,7 @@ import type { CellContentType, CellType } from "../../types";
 import type { ShortTeamNames } from "../../types/nba";
 import { TeamLogo } from "./TeamLogo";
 
-interface TableCellProps {
+export interface TableCellProps {
   cellType?: CellType;
   contentType?: CellContentType;
   className?: string;
