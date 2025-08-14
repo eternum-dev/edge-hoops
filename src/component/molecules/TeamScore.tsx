@@ -1,8 +1,6 @@
-import type { MoleculesSize, PositionLogo, TextColor } from "../../types";
+import type { MoleculesSize, PositionLogo, SizeStylesTypes, TextColor } from "../../types";
 import type { ShortTeamNames } from "../../types/nba";
 import { Strong, TeamLogo, Text } from "../atoms";
-
-type SizeStylesTypes = { text: "m" | "l"; logo: "small" | "medium" };
 
 interface TeamScoreProps {
   positionLogo?: PositionLogo;
