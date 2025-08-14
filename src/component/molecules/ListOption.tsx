@@ -1,11 +1,5 @@
-import type { ShortTeamNames } from "../../types/nba";
 import { Option } from "../atoms";
-import { type TextPosition } from "../../types/ui";
-
-type ArrayListType = {
-  team: ShortTeamNames;
-  label: string;
-};
+import { type ArrayListType, type TextPosition } from "../../types/ui";
 
 interface ListOptionProps {
   ArrayList: Array<ArrayListType>;
