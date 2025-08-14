@@ -1,13 +1,6 @@
-import type { ShortTeamNames } from "../../types/nba";
-import { TableCell } from "../atoms/TableCell";
+import { TableCell, type TableCellProps } from "../atoms/TableCell";
 
 type ColumTableContent = "text" | "date" | "team";
-
-interface TableCellProps {
-  className?: string;
-  children?: React.ReactNode;
-  icon?: ShortTeamNames;
-}
 
 interface ColumTableProps {
   typeColum?: ColumTableContent;
