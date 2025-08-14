@@ -32,3 +32,25 @@ export interface DropDownOptions {
   label: string;
 }
 
+export interface MatchGraphData {
+  title?: string;
+  graphs: {
+    titleGraph: string;
+    value: [number | string, number | string];
+  }[];
+  buttons: { label: string }[];
+  typeGraph: "match";
+  leftTeam: ShortTeamNames;
+  rightTeam: ShortTeamNames;
+}
+
+export interface TeamGraphData {
+  title?: string;
+  graphs: {
+    titleGraph: string;
+    value: [number | string];
+    
+  }[];
+  buttons: { label: string }[];
+  typeGraph: "team";
+}
