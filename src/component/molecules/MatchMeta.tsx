@@ -1,28 +1,32 @@
-import type { DateSize, ShortTeamNames, TeamLogoSize, TextSize } from "../../types";
+import type {
+  DateSize,
+  MoleculesSize,
+  ShortTeamNames,
+  TeamLogoSize,
+  TextColor,
+  TextSize,
+} from "../../types";
 import { Date, TeamLogo, Text } from "../atoms";
 
-type MatchMetaTextColor = "white" | "black";
-type MatchMetaSize = "small" | "full";
-
 interface MatchMetaProps {
-  textColor?: MatchMetaTextColor;
-  size?: MatchMetaSize;
+  textColor?: TextColor;
+  size?: MoleculesSize;
   stadium: string;
   date: string;
   winnerTeamCode: ShortTeamNames;
 }
 
-const textSizeStyles: Record<MatchMetaSize, TextSize> = {
+const textSizeStyles: Record<MoleculesSize, TextSize> = {
   small: "m",
   full: "l",
 };
 
-const dateSizeStyles: Record<MatchMetaSize, DateSize> = {
+const dateSizeStyles: Record<MoleculesSize, DateSize> = {
   small: "s",
   full: "m",
 };
 
-const teamLogoSizeStyles: Record<MatchMetaSize, TeamLogoSize> = {
+const teamLogoSizeStyles: Record<MoleculesSize, TeamLogoSize> = {
   small: "small",
   full: "medium",
 };
