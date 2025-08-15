@@ -54,3 +54,17 @@ export interface TeamGraphData {
   buttons: { label: string }[];
   typeGraph: "team";
 }
+
+export type StatsPlayer = {
+  label: string;
+  value: string | number;
+};
+
+export interface PlayerData {
+  namePlayer: string;
+  leftStats: StatsPlayer[];
+  rightStats: StatsPlayer[];
+  imagePlayer: string;
+  positionPlayer: string;
+  shirtNumber: string;
+}
