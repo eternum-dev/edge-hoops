@@ -31,6 +31,7 @@ export type PositionLogo = "left" | "right";
 export type IconSize = "small" | "medium" | "full";
 export type IconNames = "Arrow" | "Fire";
 export type IconComponentKeys = `${IconNames}Icon`;
+export type TeamLogoComponentKeys = `${ShortTeamNames}Logo`;
 
 // tags
 export type TitleTagType = "h1" | "h2" | "h3" | "h4";
