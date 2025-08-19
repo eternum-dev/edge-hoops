@@ -1,12 +1,12 @@
+import type { ColumTableContent } from "../../types";
 import { TableCell, type TableCellProps } from "../atoms/TableCell";
 
-type ColumTableContent = "text" | "date" | "team";
 
 interface ColumTableProps {
   typeColum?: ColumTableContent;
   className?: string;
-  headerText?: string;
-  cellContent?: Array<TableCellProps>;
+  headerText: string;
+  cellContent: Array<TableCellProps>;
 }
 
 export const ColumTable: React.FC<ColumTableProps> = ({
