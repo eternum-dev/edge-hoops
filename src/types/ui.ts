@@ -50,3 +50,6 @@ export type StatBoxColor = "white" | "blue";
 
 // typeValue 
 export type StatValue = number | string;
+
+// table 
+export type ColumTableContent = "text" | "date" | "team";
