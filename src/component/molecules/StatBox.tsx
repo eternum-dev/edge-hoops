@@ -33,7 +33,7 @@ export const StatBox: React.FC<StatBoxProps> = ({
     <div
       className={`w-fit h-fit gap-2 flex px-1 py-0 rounded-2xs items-end drop-shadow-neutral-1000 drop-shadow-sm ${textPositionStyles[textPosition]} ${colorStyles[color]}`}
     >
-      <Text color={textColorStyles[color]} size="s">
+      <Text color={textColorStyles[color]} size="m">
         {title}
       </Text>
       <Strong color={textColorStyles[color]} size="s">
