@@ -11,7 +11,7 @@ export const MatchUpTeam: React.FC<MatchUpTeamProps> = ({
   rightTeam = "CHI",
 }) => {
   return (
-    <div className="flex">
+    <div className="flex h-fit">
       <TeamLogo size="small" team={leftTeam} />
       <Divider className="w-[12px]!" />
       <TeamLogo size="small" team={rightTeam} />
