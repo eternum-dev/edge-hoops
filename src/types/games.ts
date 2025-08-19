@@ -49,7 +49,6 @@ export interface TeamGraphData {
   graphs: {
     titleGraph: string;
     value: [number | string];
-    
   }[];
   buttons: { label: string }[];
   typeGraph: "team";
@@ -64,7 +63,7 @@ export interface PlayerData {
   namePlayer: string;
   leftStats: StatsPlayer[];
   rightStats: StatsPlayer[];
-  imagePlayer: string;
+  imagePlayer: { src: string; alt: string };
   positionPlayer: string;
   shirtNumber: string;
 }
