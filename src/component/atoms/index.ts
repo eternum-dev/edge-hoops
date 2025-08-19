@@ -12,4 +12,5 @@ export * from './TableCell';
 export * from './TeamBox';
 export * from './Text';
 export * from './Title';
-export * from './TeamLogo'
+export * from './TeamLogo';
+export * from './Image';
