@@ -16,7 +16,7 @@ export const ColumTable: React.FC<ColumTableProps> = ({
   cellContent = [],
 }) => {
   return (
-    <div className={className}>
+    <div className={`w-full ${className}`}>
       <TableCell cellType="header" contentType={typeColum}>
         {headerText}
       </TableCell>
