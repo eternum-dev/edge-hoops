@@ -1,4 +1,6 @@
+import type { TableCellProps } from "../component/atoms";
 import type { ShortTeamNames } from "./nba";
+import type { ColumTableContent } from "./ui";
 
 export interface GameData {
   homeTeam: {
@@ -66,4 +68,20 @@ export interface PlayerData {
   imagePlayer: { src: string; alt: string };
   positionPlayer: string;
   shirtNumber: string;
+}
+
+export type TableData = {
+  type: ColumTableContent;
+  header: string;
+  body: TableCellProps[];
+};
+
+export type MatchUpData = {
+  leftTeam: ShortTeamNames;
+  rightTeam: ShortTeamNames;
+};
+
+export interface DefinitionProps {
+  abbreviation: string;
+  fullWord: string;
 }
