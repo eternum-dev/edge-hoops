@@ -1,9 +1,5 @@
+import type { DefinitionProps } from "../../types";
 import { Strong, Text } from "../atoms";
-
-interface DefinitionProps {
-  abbreviation: string;
-  fullWord: string;
-}
 
 export const Definition: React.FC<DefinitionProps> = ({ abbreviation, fullWord }) => {
   return (
