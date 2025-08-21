@@ -9,8 +9,8 @@ interface ButtonProps {
 }
 
 const baseStyles: Record<WidthSize, string> = {
-  fit: "rounded-2xs font-inter font-regular leading-b3 text-b3 pt-(--spacing-2) pb-(--spacing-2) pr-(--spacing-4) pl-(--spacing-4) h-min",
-  max: "rounded-2xs font-inter font-regular leading-b3 text-b3 pt-(--spacing-2) pb-(--spacing-2) pr-(--spacing-4) pl-(--spacing-4) h-full max-h-[45px]",
+  fit: "rounded-2xs font-inter font-regular leading-b3 text-b3 py-(--spacing-1) px-(--spacing-2) h-full",
+  max: "rounded-2xs font-inter font-regular leading-b3 text-b3 py-(--spacing-2) px-(--spacing-4) h-full max-h-[45px]",
 };
 
 const colorStyles: Record<TypeColor, string> = {
