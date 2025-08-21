@@ -29,3 +29,21 @@ export type ShortTeamNames =
   | "TOT"
   | "UTA"
   | "WAS";
+
+export type StatsItemName =
+  | { short: "PTS"; label: "Puntos" }
+  | { short: "AST"; label: "Asistencias" }
+  | { short: "REB"; label: "Rebotes totales" }
+  | { short: "STL"; label: "Robos" }
+  | { short: "TO";  label: "Pérdidas de balón" }
+  | { short: "FG%"; label: "Porcentaje de tiros de campo" };
+
+export type ConferenceNames = "EAST" | "WEST";
+
+export type DivisionNames =
+  | "ATLANTIC"
+  | "CENTRAL"
+  | "SOUTHEAST"
+  | "NORTHWEST"
+  | "PACIFIC"
+  | "SOUTHWEST";
