@@ -15,7 +15,7 @@ const baseStyles = `text-b1 font-medium leading-b1 w-full flex justify-between`;
 const cellTypeStyles: Record<CellType, string> = {
   body: "w-fit h-fit px-2 py-1 text-neutral-1000 bg-neutral-100 flex border-neutral-200 border-t-0 border-[1px]  ",
   header:
-    "w-fit h-fit px-2 py-1 text-neutral-100 bg-secondary-300 border-secondary-300 border-[1px]",
+    "w-fit h-fit px-2 py-1 text-neutral-100 bg-secondary-300 border-x-secondary-200 border-y-secondary-300 border-[1px]",
 };
 
 const contentTypeStyles: Record<CellContentType, string> = {
@@ -36,7 +36,7 @@ export const TableCell: React.FC<TableCellProps> = ({
 
   return (
     <div
-      className={`${className} ${cellTypeStyles[cellType]} ${contentTypeStyles[contentType]} ${baseStyles}`}
+      className={`${className} ${cellTypeStyles[cellType]} ${contentTypeStyles[contentType]} ${baseStyles} `}
     >
       {children} {isTypeTeamBody && <TeamLogo size={"verySmall"} team={icon} />}
     </div>
