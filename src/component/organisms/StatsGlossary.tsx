@@ -14,7 +14,7 @@ export const StatsGlossary: React.FC<StatsGlossary> = ({
   return (
     <footer className="flex flex-col bg-neutral-100">
       <header>
-        <Title type="h4">{title ? title : "Definiciones"}</Title>
+        <Title type="h3">{title ? title : "Definiciones"}</Title>
       </header>
       <div className="flex w-full justify-between gap-0">
         {glossaryData.map(({ abbreviation, fullWord }) => (
