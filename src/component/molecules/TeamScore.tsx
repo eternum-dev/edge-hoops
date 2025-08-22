@@ -42,7 +42,7 @@ export const TeamScore: React.FC<TeamScoreProps> = ({
       <Strong color={colorText} size={sizeStyles[size].text}>
         {score}
       </Strong>
-      <Text color={colorText} size={sizeStyles[size].text}>
+      <Text className="text-center" color={colorText} size={sizeStyles[size].text}>
         {teamName}
       </Text>
       <TeamLogo size={sizeStyles[size].logo} team={team} />
