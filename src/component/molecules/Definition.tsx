@@ -1,11 +1,16 @@
 import type { DefinitionProps } from "../../types";
-import { Strong, Text } from "../atoms";
+import { Text } from "../atoms";
 
-export const Definition: React.FC<DefinitionProps> = ({ abbreviation, fullWord }) => {
+export const Definition: React.FC<DefinitionProps> = ({
+  abbreviation,
+  fullWord,
+}) => {
   return (
-    <div className="bg-neutral-100 p-1 flex gap-1 items-end">
-      <Strong size="s">{abbreviation}</Strong>
-      <Text size="s">{fullWord}</Text>
+    <div className="bg-neutral-100 flex flex-col">
+      <Text className="!text-neutral-700" size="m">
+        {abbreviation}
+      </Text>
+      <Text className="relative left-1" size="m">{fullWord}</Text>
     </div>
   );
 };
