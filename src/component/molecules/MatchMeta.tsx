@@ -39,7 +39,7 @@ export const MatchMeta: React.FC<MatchMetaProps> = ({
   winnerTeamCode,
 }) => {
   return (
-    <div className="grid grid-cols-5 gap-1 items-center w-full justify-between py-0.5 px-2">
+    <div className="grid grid-cols-6 gap-1 items-center w-full justify-between py-0.5">
       <Text color={textColor} size={textSizeStyles[size]}>
         ganador
       </Text>
@@ -47,7 +47,7 @@ export const MatchMeta: React.FC<MatchMetaProps> = ({
       <Date
         textColor={textColor}
         size={dateSizeStyles[size]}
-        className="text-center"
+        className="text-center col-span-2"
       >
         {date}
       </Date>
