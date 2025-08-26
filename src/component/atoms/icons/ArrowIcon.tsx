@@ -1,6 +1,6 @@
-type ArrowIcon = { size: number };
+type ArrowIcon = { size: number, className: string };
 
-export const ArrowIcon: React.FC<ArrowIcon> = ({ size = 32 }) => {
+export const ArrowIcon: React.FC<ArrowIcon> = ({ size = 32, className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,6 +8,7 @@ export const ArrowIcon: React.FC<ArrowIcon> = ({ size = 32 }) => {
       height={size}
       fill="none"
       viewBox="0 0 12 14"
+      className={className}
     >
       <path
         fill="#000"
