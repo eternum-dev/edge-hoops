@@ -4,6 +4,7 @@ import * as Icons from "./icons";
 interface IconProps {
   icon?: IconNames;
   size?: IconSize;
+  className?: string;  
 }
 
 const baseSizeIcon: Record<IconSize, number> = {
@@ -15,6 +16,7 @@ const baseSizeIcon: Record<IconSize, number> = {
 export const Icon: React.FC<IconProps> = ({
   icon = "Arrow",
   size = "small",
+  className= ""
 }) => {
   const keyIcon = `${icon.charAt(0).toUpperCase()}${icon
     .slice(1)
@@ -23,5 +25,5 @@ export const Icon: React.FC<IconProps> = ({
   const Icon = Icons[keyIcon];
   if (!Icon) return <div>Icon not found: {icon}</div>;
 
-  return <Icon size={baseSizeIcon[size]} />;
+  return <Icon size={baseSizeIcon[size]} className={className} />;
 };
