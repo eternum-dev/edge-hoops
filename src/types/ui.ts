@@ -58,3 +58,5 @@ export type StatValue = number | string;
 
 // table 
 export type ColumTableContent = "text" | "date" | "team";
+
+export type ButtonType = "button" | "submit" | "reset"; 
