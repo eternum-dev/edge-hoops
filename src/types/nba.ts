@@ -35,7 +35,7 @@ export type StatsItemName =
   | { short: "AST"; label: "Asistencias" }
   | { short: "REB"; label: "Rebotes totales" }
   | { short: "STL"; label: "Robos" }
-  | { short: "TO";  label: "Pérdidas de balón" }
+  | { short: "TO"; label: "Pérdidas de balón" }
   | { short: "FG%"; label: "Porcentaje de tiros de campo" };
 
 export type ConferenceNames = "EAST" | "WEST";
@@ -47,3 +47,11 @@ export type DivisionNames =
   | "NORTHWEST"
   | "PACIFIC"
   | "SOUTHWEST";
+
+export interface NBAteam {
+  name: string;
+  shortName: ShortTeamNames;
+  conference: ConferenceNames;
+  division: DivisionNames;
+  stadium: string;
+}
