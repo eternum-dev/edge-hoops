@@ -30,7 +30,7 @@ export interface TeamStatsData {
 }
 
 export interface DropDownOptions {
-  team: ShortTeamNames;
+  team?: ShortTeamNames;
   label: string;
 }
 
