@@ -5,6 +5,11 @@ export type TextColor = "white" | "black";
 export type TextSize = "s" | "m" | "l" | "xl";
 export type TextPosition = "left" | "right";
 export type StrongSize = "s" | "m" | "l";
+export type FontTypes = "inter" | "oswald";
+
+// span
+export type SpanColor = "primary" | "secondary" | "neutral";
+export type SpanSize = "s" | "m" | "l";
 
 // dates
 export type DateSize = "s" | "m";
