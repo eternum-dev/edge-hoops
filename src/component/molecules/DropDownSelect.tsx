@@ -14,13 +14,18 @@ export const DropDownSelect: React.FC<DropDownSelectProps> = ({
 }) => {
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
   return (
-    <div className="p-1.5 w-full">
+    <div className={`w-full  ${className}`}>
       <button
-        className={`w-full h-[40px] flex justify-between bg-neutral-100 px-2 py-1.5 drop-shadow-neutral-1000 drop-shadow-sm mb-1 rounded-2xs items-center relative z-20 ${className} `}
+        className={`w-full flex justify-between bg-neutral-100 px-2 py-1.5 drop-shadow-neutral-1000 drop-shadow-sm rounded-2xs items-center relative z-20`}
         onClick={() => setIsOpenDropDown((prevValue) => !prevValue)}
       >
         <Text size="m">{label}</Text>
-        <Icon icon="Arrow" />
+        <Icon
+          icon="Arrow"
+          className={`${
+            isOpenDropDown && "rotate-90 transition-transform"
+          } rotate-0 transition-transform`}
+        />
       </button>
       {isOpenDropDown && <>{children}</>}
     </div>
