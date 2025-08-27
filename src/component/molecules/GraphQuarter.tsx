@@ -1,29 +1,53 @@
 import { Text } from "../atoms";
 import { GraphBar } from "../atoms/GraphBar";
 
-type TypeGraphQuarter = "match" | "team";
-
-interface GraphQuarterProps {
-  typeGraph?: TypeGraphQuarter;
+interface TeamQuarterProps {
+  typeGraph: "team";
   titleQuarter: string;
-  valueGraph: number | Array<number>;
+  valueGraph: [number | string];
 }
 
+interface MatchQuarterProps {
+  typeGraph: "match";
+  titleQuarter: string;
+  valueGraph: [number | string, number | string];
+}
+
+type GraphQuarterProps = TeamQuarterProps | MatchQuarterProps;
+
 export const GraphQuarter: React.FC<GraphQuarterProps> = ({
-  typeGraph = "match",
+  typeGraph,
   titleQuarter = "1 tiempo",
-  valueGraph = 10,
+  valueGraph,
 }) => {
   return (
-    <div className="w-fit h-full flex flex-col px-2 py-1">
-      {<Text>{titleQuarter}</Text>}
+    <div className="w-full h-full max-w-[200px] flex flex-col px-2 py-1">
+      {
+        <Text size="s" className="text-center mb-1">
+          {titleQuarter}
+        </Text>
+      }
       {typeGraph === "match" ? (
-        <div className="flex gap-1 w-fit h-full">
-          <GraphBar height={valueGraph} value={10} color="primary" />
-          <GraphBar height={valueGraph} value={10} color="secondary" />
+        <div className="flex gap-1 w-full h-full ">
+          <GraphBar
+            height={valueGraph[0]}
+            value={valueGraph[0]}
+            color="primary"
+            className="items-end"
+          />
+          <GraphBar
+            height={valueGraph[1]}
+            value={valueGraph[1]}
+            color="secondary"
+            className="items-start"
+          />
         </div>
       ) : (
-        <GraphBar height={valueGraph} value={10} color="secondary" />
+        <GraphBar
+          height={valueGraph[0]}
+          value={valueGraph[0]}
+          color="secondary"
+        />
       )}
     </div>
   );
