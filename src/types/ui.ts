@@ -39,7 +39,7 @@ export type IconComponentKeys = `${IconNames}Icon`;
 export type TeamLogoComponentKeys = `${ShortTeamNames}Logo`;
 
 // tags
-export type TitleTagType = "h1" | "h2" | "h3" | "h4";
+export type TitleTagType = "h1" | "h2" | "h3" | "h4"| "h5";
 
 // component
 export type MoleculesSize = "small" | "full";
