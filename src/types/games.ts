@@ -44,6 +44,7 @@ export interface MatchGraphData {
   typeGraph: "match";
   leftTeam: ShortTeamNames;
   rightTeam: ShortTeamNames;
+  className?: string;
 }
 
 export interface TeamGraphData {
@@ -54,6 +55,7 @@ export interface TeamGraphData {
   }[];
   buttons: { label: string }[];
   typeGraph: "team";
+  className?: string;
 }
 
 export type StatsPlayer = {
