@@ -29,7 +29,7 @@ export const GraphBar: React.FC<GraphBarProps> = ({
         style={{ height: `calc(calc(100% - 30px) * ${newHeight} )` }}
         className={`${className} ${BaseStyled[color]}`}
       ></div>
-      <Text size="s">{value}</Text>
+      <Text size="m">{value}</Text>
     </div>
   );
 };
