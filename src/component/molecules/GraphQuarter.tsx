@@ -1,4 +1,4 @@
-import { Text } from "../atoms";
+import { Title } from "../atoms";
 import { GraphBar } from "../atoms/GraphBar";
 
 interface TeamQuarterProps {
@@ -21,11 +21,11 @@ export const GraphQuarter: React.FC<GraphQuarterProps> = ({
   valueGraph,
 }) => {
   return (
-    <div className="w-full h-full max-w-[200px] flex flex-col px-2 py-1">
+    <div className="w-full h-full max-w-[200px] flex flex-col">
       {
-        <Text size="s" className="text-center mb-1">
+        <Title type="h5" className="text-center">
           {titleQuarter}
-        </Text>
+        </Title>
       }
       {typeGraph === "match" ? (
         <div className="flex gap-1 w-full h-full ">
