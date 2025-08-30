@@ -8,12 +8,13 @@ import type {
 } from "../../types";
 import { Date, TeamLogo, Text } from "../atoms";
 
-interface MatchMetaProps {
+export interface MatchMetaProps {
   textColor?: TextColor;
   size?: MoleculesSize;
   stadium: string;
   date: string;
   winnerTeamCode: ShortTeamNames;
+  className?: string;
 }
 
 const textSizeStyles: Record<MoleculesSize, TextSize> = {
@@ -28,7 +29,7 @@ const dateSizeStyles: Record<MoleculesSize, DateSize> = {
 
 const teamLogoSizeStyles: Record<MoleculesSize, TeamLogoSize> = {
   small: "small",
-  full: "medium",
+  full: "small",
 };
 
 export const MatchMeta: React.FC<MatchMetaProps> = ({
@@ -37,16 +38,19 @@ export const MatchMeta: React.FC<MatchMetaProps> = ({
   stadium,
   date,
   winnerTeamCode,
+  className = "",
 }) => {
   return (
-    <div className="grid grid-cols-6 gap-2 items-center w-full justify-between py-0.5">
+    <div
+      className={`grid grid-cols-6 gap-2 items-center w-full justify-between py-0.5 ${className}`}
+    >
       <div className="flex gap-3 col-span-2 items-center">
         <Text color={textColor} size={textSizeStyles[size]}>
-        ganador
-      </Text>
-      <TeamLogo size={teamLogoSizeStyles[size]} team={winnerTeamCode} />
+          ganador
+        </Text>
+        <TeamLogo size={teamLogoSizeStyles[size]} team={winnerTeamCode} />
       </div>
-      
+
       <Date
         textColor={textColor}
         size={dateSizeStyles[size]}
