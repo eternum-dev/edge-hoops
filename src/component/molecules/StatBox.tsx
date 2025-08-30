@@ -15,7 +15,7 @@ const textPositionStyles: Record<TextPosition, string> = {
 
 const colorStyles: Record<StatBoxColor, string> = {
   blue: "bg-secondary-300",
-  white: "bg-neutral-100",
+  white: "bg-neutral-100  drop-shadow-neutral-1000 drop-shadow-sm",
 };
 
 const textColorStyles: Record<StatBoxColor, TextColor> = {
@@ -31,7 +31,7 @@ export const StatBox: React.FC<StatBoxProps> = ({
 }) => {
   return (
     <div
-      className={`w-fit h-fit gap-2 flex px-1 py-0 rounded-2xs items-end drop-shadow-neutral-1000 drop-shadow-sm ${textPositionStyles[textPosition]} ${colorStyles[color]}`}
+      className={`w-fit h-fit gap-2 flex px-1 py-0 rounded-2xs items-end ${textPositionStyles[textPosition]} ${colorStyles[color]}`}
     >
       <Text color={textColorStyles[color]} size="m">
         {title}
