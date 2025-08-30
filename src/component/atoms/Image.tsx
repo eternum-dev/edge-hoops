@@ -10,9 +10,9 @@ export const Image: React.FC<ImageProps> = ({ src, alt, className = "" }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className={`relative w-full overflow-hidden ${className}`}>
+    <div className={`relative w-full overflow-hidden h-full ${className}`}>
       {!isLoaded && (
-        <div className="animate-pulse bg-neutral-300 w-full h-64 flex items-center justify-center">
+        <div className="animate-pulse bg-neutral-300 w-full h-full flex items-center justify-center">
           <span className="text-neutral-900 text-sm">Cargando...</span>
         </div>
       )}
