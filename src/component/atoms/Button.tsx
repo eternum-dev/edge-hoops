@@ -6,7 +6,7 @@ interface ButtonProps {
   className?: string;
   children: React.ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
-  type: ButtonType;
+  type?: ButtonType;
 }
 
 const baseStyles: Record<WidthSize, string> = {
