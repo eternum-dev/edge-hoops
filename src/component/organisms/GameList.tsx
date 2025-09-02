@@ -2,11 +2,12 @@ import type { GameData } from "../../types";
 import { Title } from "../atoms";
 import { GameCard } from "./GameCard";
 
-interface GameListProps {
+export interface GameListProps {
   title?: string;
   gameListData: GameData[];
   handleIsSelected: (currentIndex: string | number) => void;
   isSelectedGame: string | number;
+  className?: string;
 }
 
 export const GameList: React.FC<GameListProps> = ({
@@ -14,16 +15,19 @@ export const GameList: React.FC<GameListProps> = ({
   gameListData,
   handleIsSelected,
   isSelectedGame,
+  className = "",
 }) => {
   return (
-    <section className=" flex flex-col gap-4 bg-neutral-100 p-5 rounded-3xl shadow-neutral-700 shadow-md">
+    <section
+      className={` flex flex-col gap-4 bg-neutral-100 p-5 rounded-3xl shadow-neutral-700 shadow-md ${className}`}
+    >
       <Title>{title}</Title>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 overflow-y-scroll p-2">
         {gameListData.map((game, index) => (
           <GameCard
             game={game}
             size="fit"
-            id={String(index)}
+            id={Number(index)}
             handleIsSelected={handleIsSelected}
             isSelectedCard={isSelectedGame}
           />
