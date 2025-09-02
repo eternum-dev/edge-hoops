@@ -22,24 +22,26 @@ export const TeamStatsCard: React.FC<TeamStatsCard> = ({
     <section
       className={`bg-neutral-100 p-4 flex w-full justify-between rounded-3xl shadow-md shadow-neutral-700 ${boderStyles[borderColor]}`}
     >
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mt-auto">
         {statsData.statsLeft.map((stats, index) => (
           <StatBox
             textPosition="left"
             title={stats.title}
             value={stats.value}
             key={index}
+            color={"blue"}
           />
         ))}
       </div>
       <TeamLogo team={statsData.logoCode} size="full" />
-      <div className="flex flex-col gap-2 items-end">
+      <div className="flex flex-col gap-2 items-end mt-auto">
         {statsData.statsRight.map((stats, index) => (
           <StatBox
             textPosition="right"
             title={stats.title}
             value={stats.value}
             key={index}
+            color={"blue"}
           />
         ))}
       </div>
