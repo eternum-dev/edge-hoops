@@ -3,11 +3,12 @@ import { ColumTable, MatchUpTeam } from "../molecules";
 import { StatsGlossary } from "./";
 import type { DefinitionProps, MatchUpData, TableData } from "../../types";
 
-interface HeadToHeadTableProps {
+export interface HeadToHeadTableProps {
   title?: string;
   matchup: MatchUpData;
   tableData: TableData[];
   glossary: DefinitionProps[];
+  className?: string;
 }
 
 export const HeadToHeadTable: React.FC<HeadToHeadTableProps> = ({
@@ -15,9 +16,12 @@ export const HeadToHeadTable: React.FC<HeadToHeadTableProps> = ({
   matchup,
   tableData,
   glossary,
+  className = "",
 }) => {
   return (
-    <section className="flex flex-col w-full gap-4 bg-neutral-100 p-5 rounded-3xl shadow-md shadow-neutral-700">
+    <section
+      className={`flex flex-col w-full gap-4 bg-neutral-100 p-5 rounded-3xl shadow-neutral-700 shadow-md ${className}`}
+    >
       <header className="flex justify-between items-center">
         <Title type="h2">{title ? title : "Head to Head"} </Title>
         <MatchUpTeam
