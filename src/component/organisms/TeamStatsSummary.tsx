@@ -6,23 +6,28 @@ interface TeamSummaryProps {
   type: "team";
   title?: string;
   TeamStatsData: [TeamStatsData];
+  className?: string;
 }
 
 interface MatchSummaryProps {
   type: "match";
   title?: string;
   TeamStatsData: [TeamStatsData, TeamStatsData];
+  className?: string;
 }
 
-type TeamStatsSummaryProps = MatchSummaryProps | TeamSummaryProps;
+export type TeamStatsSummaryProps = MatchSummaryProps | TeamSummaryProps;
 
 export const TeamStatsSummary: React.FC<TeamStatsSummaryProps> = ({
   type,
   title,
   TeamStatsData,
+  className = "",
 }) => {
   return (
-    <section className="flex flex-col gap-4 bg-neutral-100 rounded-4xl p-5">
+    <section
+      className={`flex flex-col gap-4 bg-neutral-100 rounded-4xl p-5 shadow-neutral-700 shadow-md ${className}`}
+    >
       <header>
         <Title type="h2">
           {title ??
@@ -31,7 +36,7 @@ export const TeamStatsSummary: React.FC<TeamStatsSummaryProps> = ({
               : "Estadísticas de equipo")}
         </Title>
       </header>
-      <div className="flex gap-2.5">
+      <div className="flex gap-2.5 h-full">
         {type === "match" ? (
           <>
             <TeamStatsCard statsData={TeamStatsData[0]} borderColor="primary" />
