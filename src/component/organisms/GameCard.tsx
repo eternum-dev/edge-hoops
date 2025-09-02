@@ -4,13 +4,25 @@ import type { GameData } from "../../types/games";
 import { Divider } from "../atoms";
 import { MatchMeta, TeamScore } from "../molecules";
 
-interface GameCardProps {
-  size: WidthSize;
+export interface GameCardSizeFitProps {
+  size: "fit";
   handleIsSelected: (currentIndex: string | number) => void;
-  isSelectedCard?: number | string;
+  isSelectedCard: number | string;
   game: GameData;
   id: number | string;
+  className?: string;
 }
+
+export interface GameCardSizeMaxProps {
+  size: "max";
+  handleIsSelected?: () => void;
+  isSelectedCard?: number | string;
+  game: GameData;
+  id?: number | string;
+  className?: string;
+}
+
+export type GameCardProps = GameCardSizeFitProps | GameCardSizeMaxProps;
 
 type GameCardItems = {
   container: string;
@@ -32,18 +44,25 @@ const sizeStylesContainer: Record<WidthSize, GameCardItems> = {
 };
 
 export const GameCard: React.FC<GameCardProps> = React.memo(
-  ({ size, handleIsSelected, isSelectedCard, game, id }) => {
+  ({
+    size,
+    handleIsSelected = () => {},
+    isSelectedCard = false,
+    game,
+    id,
+    className,
+  }) => {
     const selectedColor = isSelectedCard === id ? "white" : "black";
     const selectedCard = () => {
       if (size === "max") return;
       handleIsSelected(id);
     };
-
+    console.log(isSelectedCard, id);
     return (
       <section
-        className={`bg-neutral-100 flex flex-col gap-2 shadow-sm shadow-neutral-800 ${
+        className={`bg-neutral-100 flex flex-col gap-3 shadow-sm shadow-neutral-800 ${
           sizeStylesContainer[size].container
-        } ${isSelectedCard === id && "bg-secondary-300"}`}
+        } ${isSelectedCard === id && "bg-secondary-300"} ${className}`}
         onClick={selectedCard}
       >
         <div className="flex gap-0.5 items-center">
