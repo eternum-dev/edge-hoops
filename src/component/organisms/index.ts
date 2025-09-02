@@ -14,3 +14,4 @@ export * from './TeamHistoryTable';
 export * from './TeamList';
 export * from './TeamStatsCard';
 export * from './TeamStatsSummary';
+export * from './SelectGameMatch';
