@@ -3,7 +3,7 @@ import { AppRouter } from "./router/AppRouter";
 
 function App() {
   return (
-    <div>
+    <div className="w-screen h-screen bg-secondary-100">
       <BrowserRouter>
         <AppRouter />
       </BrowserRouter>
