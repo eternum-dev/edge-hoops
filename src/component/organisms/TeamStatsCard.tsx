@@ -20,7 +20,7 @@ export const TeamStatsCard: React.FC<TeamStatsCard> = ({
 
   return (
     <section
-      className={`bg-neutral-100 p-4 flex w-full justify-between rounded-3xl shadow-md shadow-neutral-700 ${boderStyles[borderColor]}`}
+      className={`bg-neutral-100 p-4 flex w-full justify-between rounded-3xl  ${boderStyles[borderColor]}`}
     >
       <div className="flex flex-col gap-2 mt-auto">
         {statsData.statsLeft.map((stats, index) => (
