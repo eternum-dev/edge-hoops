@@ -57,12 +57,12 @@ export const GameCard: React.FC<GameCardProps> = React.memo(
       if (size === "max") return;
       handleIsSelected(id);
     };
-    console.log(isSelectedCard, id);
+
     return (
       <section
-        className={`bg-neutral-100 flex flex-col gap-3 shadow-sm shadow-neutral-800 ${
+        className={`bg-neutral-100 flex flex-col gap-3 border border-neutral-300 ${
           sizeStylesContainer[size].container
-        } ${isSelectedCard === id && "bg-secondary-300"} ${className}`}
+        } ${isSelectedCard === id && "bg-secondary-300 border border-secondary-300"} ${className}`}
         onClick={selectedCard}
       >
         <div className="flex gap-0.5 items-center">
