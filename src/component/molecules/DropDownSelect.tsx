@@ -14,12 +14,12 @@ export const DropDownSelect: React.FC<DropDownSelectProps> = ({
 }) => {
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
   return (
-    <div className={`w-full  ${className}`}>
+    <div className={`w-full z-20 ${className}`}>
       <button
-        className={`w-full flex justify-between bg-neutral-100 px-2 py-1.5 drop-shadow-neutral-1000 drop-shadow-sm rounded-2xs items-center relative z-20`}
+        className={`w-full flex justify-between bg-neutral-100 p-2  border-neutral-300 border rounded-2xs items-center relative z-20 max-h-[300px]`}
         onClick={() => setIsOpenDropDown((prevValue) => !prevValue)}
       >
-        <Text size="m">{label}</Text>
+        <Text size="l">{label}</Text>
         <Icon
           icon="Arrow"
           className={`${
