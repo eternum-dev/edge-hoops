@@ -21,14 +21,14 @@ export const GraphQuarter: React.FC<GraphQuarterProps> = ({
   valueGraph,
 }) => {
   return (
-    <div className="w-full h-full max-w-[200px] flex flex-col">
+    <div className="w-full h-full max-w-[200px] flex flex-col justify-between">
       {
         <Title type="h5" className="text-center">
           {titleQuarter}
         </Title>
       }
       {typeGraph === "match" ? (
-        <div className="flex gap-1 w-full h-full ">
+        <div className="flex gap-1 w-full h-full max-h-[200px] ">
           <GraphBar
             height={valueGraph[0]}
             value={valueGraph[0]}
