@@ -5,22 +5,24 @@ import { DropDownSelect } from "../molecules";
 export interface DropDownMenuProps {
   optionData: DropDownOptions[];
   className?: string;
-  placeholder?: string
+  placeholder?: string;
 }
 
 export const DropDownMenu: React.FC<DropDownMenuProps> = ({
   optionData,
   className,
-  placeholder = "Selecciona tu equipo"
+  placeholder = "Selecciona tu equipo",
 }) => {
   return (
-    <DropDownSelect label={placeholder} className={className} >
-      <div className="flex flex-col gap-0 px-1.5 py-2.5 bg-neutral-100 z-10 relative bottom-0 rounded-b-xs max-h-60 overflow-y-scroll scroll-smooth">
-        {optionData.map(({ label, team }, index) => (
-          <Option textPosition="left" key={index} icon={team}>
-            {label}
-          </Option>
-        ))}
+    <DropDownSelect label={placeholder} className={className}>
+      <div className="flex flex-col gap-0 px-2 pt-2 pb-2.5 z-10 relative bottom-1 rounded-b-xs max-h-[150px]  border overflow-hidden border-neutral-300 bg-neutral-200">
+        <div className="flex flex-col gap-0  overflow-y-scroll scroll-smooth pr-1.5 mr-0.5">
+          {optionData.map(({ label, team }, index) => (
+            <Option textPosition="left" key={index} icon={team}>
+              {label}
+            </Option>
+          ))}
+        </div>
       </div>
     </DropDownSelect>
   );
