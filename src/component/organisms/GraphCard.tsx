@@ -21,7 +21,7 @@ export const GraphCard: React.FC<GraphCardProps> = (props) => {
       </header>
       <div className="h-full flex flex-col justify-center gap-2.5">
         <div className="flex h-full flex-col gap-2">
-          <div className="flex h-full justify-around">
+          <div className="flex h-full justify-around  items-stretch">
             {typeGraph === "match"
               ? graphs.map(({ titleGraph, value }, index) => (
                   <React.Fragment key={titleGraph}>
