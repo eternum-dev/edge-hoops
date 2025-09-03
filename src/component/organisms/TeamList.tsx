@@ -3,7 +3,7 @@ import type { TextPosition } from "../../types";
 import { Option, Title } from "../atoms";
 import { Span } from "../atoms/Span";
 
-interface TeamListProps {
+export interface TeamListProps {
   teamStructure: NBAConference;
   nameTeamPosition?: TextPosition;
   className?: string;
@@ -21,7 +21,7 @@ export const TeamList: React.FC<TeamListProps> = ({
 
   return (
     <section
-      className={`w-full flex flex-col  gap-2 bg-neutral-100 p-5 rounded-3xl  shadow-neutral-900 shadow-md $ ${className}`}
+      className={`w-full flex flex-col  gap-2 bg-neutral-100 p-5 rounded-3xl  shadow-neutral-900 shadow-md  ${className}`}
     >
       <header>
         <Title>
@@ -31,30 +31,31 @@ export const TeamList: React.FC<TeamListProps> = ({
           </Span>
         </Title>
       </header>
-
-      {divisions.map(({ division, teams }) => (
-        <div className="flex flex-col gap-2 mx-2">
-          <Title type="h3">
-            Division
-            <Span size="m" color="secondary">
-              {division}
-            </Span>
-          </Title>
-          <div
-            className={`mx-1 w-full flex flex-col gap-0.5 ${positionStyles[nameTeamPosition]}`}
-          >
-            {teams.map(({ name, shortName }) => (
-              <Option
-                icon={shortName}
-                textPosition={nameTeamPosition}
-                key={name}
-              >
-                {name}
-              </Option>
-            ))}
+      <div className="flex flex-col overflow-y-scroll">
+        {divisions.map(({ division, teams }) => (
+          <div className="flex flex-col gap-2 ml-2 mr-4 mt-2">
+            <Title type="h3">
+              Division
+              <Span size="m" color="secondary">
+                {division}
+              </Span>
+            </Title>
+            <div
+              className={`mx-1 w-full flex flex-col gap-0.5 ${positionStyles[nameTeamPosition]}`}
+            >
+              {teams.map(({ name, shortName }) => (
+                <Option
+                  icon={shortName}
+                  textPosition={nameTeamPosition}
+                  key={name}
+                >
+                  {name}
+                </Option>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };
