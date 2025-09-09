@@ -65,7 +65,7 @@ export const GameCard: React.FC<GameCardProps> = React.memo(
         } ${isSelectedCard === id && "bg-secondary-300 border border-secondary-300"} ${className}`}
         onClick={selectedCard}
       >
-        <div className="flex gap-0.5 items-center">
+        <div className="flex gap-1.5 items-center h-full">
           <TeamScore
             team={game.homeTeam.code}
             teamName={game.homeTeam.name}
