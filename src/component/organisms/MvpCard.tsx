@@ -30,9 +30,14 @@ export const MvpCard: React.FC<MvpCardProps> = ({
         <Title type="h2">{title ? title : "Este es el titulo"}</Title>
       </header>
       <div className="flex gap-1 h-full w-full justify-between items-center">
-        <div className="flex flex-col gap-2 mt-auto">
+        <div className="flex flex-col gap-2 justify-around h-full">
           {leftStats.map(({ label, value }) => (
-            <StatBox title={label} value={value} color="blue" textPosition="left" />
+            <StatBox
+              title={label}
+              value={value}
+              color="blue"
+              textPosition="left"
+            />
           ))}
         </div>
         <div className="w-full flex h-full flex-col gap-1 px-2 py-0 items-center justify-between">
@@ -46,9 +51,14 @@ export const MvpCard: React.FC<MvpCardProps> = ({
             <Span size="s"> {shirtNumber}</Span>
           </Text>
         </div>
-        <div className="flex flex-col gap-2 mt-auto">
+        <div className="flex flex-col gap-2 justify-around h-full">
           {rightStats.map(({ label, value }) => (
-            <StatBox title={label} value={value} color="blue" textPosition="right" />
+            <StatBox
+              title={label}
+              value={value}
+              color="blue"
+              textPosition="right"
+            />
           ))}
         </div>
       </div>
