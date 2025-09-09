@@ -5,6 +5,7 @@ import * as TeamsIcon from "./team-logos";
 interface TeamLogoProps {
   team?: ShortTeamNames;
   size?: TeamLogoSize;
+  className?: string;
 }
 
 const baseSizeTeam: Record<TeamLogoSize, number> = {
@@ -17,6 +18,7 @@ const baseSizeTeam: Record<TeamLogoSize, number> = {
 export const TeamLogo: React.FC<TeamLogoProps> = ({
   team = "ATL",
   size = "medium",
+  className = "",
 }) => {
   const keyTeam = `${team.toUpperCase()}Logo` as TeamLogoComponentKeys;
 
@@ -24,5 +26,10 @@ export const TeamLogo: React.FC<TeamLogoProps> = ({
 
   if (!Logo) return <div>Team not found: {team}</div>;
 
-  return <Logo size={baseSizeTeam[size]} />;
+  return (
+    <Logo
+      size={baseSizeTeam[size]}
+      className={` ${size === "full" && "w-full h-full"} ${className}`}
+    />
+  );
 };
