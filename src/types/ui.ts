@@ -4,7 +4,7 @@ import type { ShortTeamNames } from "./nba";
 export type TextColor = "white" | "black";
 export type TextSize = "s" | "m" | "l" | "xl";
 export type TextPosition = "left" | "right";
-export type StrongSize = "s" | "m" | "l";
+export type StrongSize = "s" | "m" | "l" | "xl";
 export type FontTypes = "inter" | "oswald";
 
 // span
@@ -39,7 +39,7 @@ export type IconComponentKeys = `${IconNames}Icon`;
 export type TeamLogoComponentKeys = `${ShortTeamNames}Logo`;
 
 // tags
-export type TitleTagType = "h1" | "h2" | "h3" | "h4"| "h5";
+export type TitleTagType = "h1" | "h2" | "h3" | "h4" | "h5";
 
 // component
 export type MoleculesSize = "small" | "full";
@@ -49,14 +49,17 @@ export type ArrayListType = {
   label: string;
 };
 
-export type SizeStylesTypes = { text: "m" | "l"; logo: "small" | "medium" };
+export type SizeStylesTypes = {
+  text: "m" | "l" | "xl";
+  logo: "small" | "medium" | "full";
+};
 // statsBox
 export type StatBoxColor = "white" | "blue";
 
-// typeValue 
+// typeValue
 export type StatValue = number | string;
 
-// table 
+// table
 export type ColumTableContent = "text" | "date" | "team";
 
 export type ButtonType = "button" | "submit" | "reset"; 
