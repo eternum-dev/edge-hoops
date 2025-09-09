@@ -17,7 +17,7 @@ export const SearchTeam: React.FC<SearchTeamProps> = ({
 }) => {
   return (
     <form
-      className={`grid grid-cols-5 items-start gap-4 bg-neutral-100 shadow-md shadow-neutral-700 p-5  rounded-[30px] ${className}`}
+      className={`grid grid-cols-6 items-start h-full gap-4 bg-neutral-100 shadow-md shadow-neutral-700 p-5  rounded-[30px] ${className}`}
       onSubmit={(sub) => {
         sub.preventDefault();
 
@@ -27,14 +27,14 @@ export const SearchTeam: React.FC<SearchTeamProps> = ({
         console.log(input.value);
       }}
     >
-      <Title className="col-span-5"> Busca tu equipo </Title>
+      <Title className="col-span-6"> Busca tu equipo </Title>
       <InputSearch
         placeholder={placeholder}
-        className="col-span-2"
+        className="col-span-4"
         name="inputSearch"
       />
       <DropDownMenu optionData={optionsData} className="col-span-2" />
-      <Button type="submit" onClick={onClick} color="primary" size="fit">
+      <Button type="submit" onClick={onClick} color="secondary" size="max" className="col-span-1">
         Buscar
       </Button>
     </form>
