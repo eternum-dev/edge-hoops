@@ -14,9 +14,9 @@ export const DropDownSelect: React.FC<DropDownSelectProps> = ({
 }) => {
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
   return (
-    <div className={`w-full z-20 ${className}`}>
+    <div className={`w-full relative h-fit ${className}`}>
       <button
-        className={`w-full flex justify-between bg-neutral-100 p-2  border-neutral-300 border rounded-2xs items-center relative z-20 max-h-[300px]`}
+        className={`w-full relative -z-0 flex justify-between bg-neutral-100 p-2  border-neutral-300 border rounded-2xs items-center  max-h-[300px]`}
         onClick={() => setIsOpenDropDown((prevValue) => !prevValue)}
       >
         <Text size="l">{label}</Text>
