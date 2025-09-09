@@ -43,11 +43,13 @@ export const GraphQuarter: React.FC<GraphQuarterProps> = ({
           />
         </div>
       ) : (
-        <GraphBar
-          height={valueGraph[0]}
-          value={valueGraph[0]}
-          color="secondary"
-        />
+        <div className="flex gap-1 w-full h-full max-h-[200px] ">
+          <GraphBar
+            height={valueGraph[0]}
+            value={valueGraph[0]}
+            color="primary"
+          />
+        </div>
       )}
     </div>
   );
