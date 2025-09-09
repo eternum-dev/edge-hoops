@@ -15,3 +15,4 @@ export * from "./Title";
 export * from "./TeamLogo";
 export * from "./Image";
 export * from "./Span";
+export * from "./LinkTo";
