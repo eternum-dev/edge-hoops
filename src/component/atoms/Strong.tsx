@@ -12,6 +12,7 @@ const colorStyles: Record<TextColor, string> = {
 };
 
 const baseStyles: Record<StrongSize, string> = {
+  xl: "font-inter font-bold text-h4 leading-h4",
   l: "font-inter font-bold text-h5 leading-h5",
   m: "font-inter font-bold text-h7 leading-h7",
   s: "font-inter font-medium text-b1 leading-b1",
