@@ -1,4 +1,9 @@
-import type { MoleculesSize, PositionLogo, SizeStylesTypes, TextColor } from "../../types";
+import type {
+  MoleculesSize,
+  PositionLogo,
+  SizeStylesTypes,
+  TextColor,
+} from "../../types";
 import type { ShortTeamNames } from "../../types/nba";
 import { Strong, TeamLogo, Text } from "../atoms";
 
@@ -18,7 +23,7 @@ const positionStyles: Record<PositionLogo, string> = {
 
 const sizeStyles: Record<MoleculesSize, SizeStylesTypes> = {
   full: {
-    text: "l",
+    text: "xl",
     logo: "medium",
   },
   small: {
@@ -37,15 +42,23 @@ export const TeamScore: React.FC<TeamScoreProps> = ({
 }) => {
   return (
     <div
-      className={`w-full flex h-fit gap-1 justify-between items-center ${positionStyles[positionLogo]}`}
+      className={`w-full  flex h-full gap-1 justify-between items-center ${positionStyles[positionLogo]}`}
     >
       <Strong color={colorText} size={sizeStyles[size].text}>
         {score}
       </Strong>
-      <Text className="text-center" color={colorText} size={sizeStyles[size].text}>
+      <Text
+        className="text-center"
+        color={colorText}
+        size={sizeStyles[size].text}
+      >
         {teamName}
       </Text>
-      <TeamLogo size={sizeStyles[size].logo} team={team} />
+      <TeamLogo
+        size={sizeStyles[size].logo}
+        team={team}
+        className="h-full w-auto"
+      />
     </div>
   );
 };
