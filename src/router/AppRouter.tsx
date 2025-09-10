@@ -4,30 +4,33 @@ import {
   Error404Page,
   FavoritesPage,
   GameDetailPage,
-  TeamPage,
+  TeamDetailPage,
   SearchGamePage,
   SearchTeamPage,
 } from "../component/pages";
+import { Layout } from "../layout/Layout";
 
 export const AppRouter = () => {
   return (
     <Routes>
-      {/* home */}
-      <Route path={"/"} element={<HomeDashboardPage />} />
+      <Route element={<Layout />}>
+        {/* home */}
+        <Route path={"/"} element={<HomeDashboardPage />} />
 
-      {/* games */}
-      <Route path={"/search-game"} element={<SearchGamePage />} />
-      <Route path={"/game"} element={<GameDetailPage />} />
+        {/* games */}
+        <Route path={"/search-game"} element={<SearchGamePage />} />
+        <Route path={"/game"} element={<GameDetailPage />} />
 
-      {/* teams */}
-      <Route path={"/search-team"} element={<SearchTeamPage />} />
-      <Route path={"/team"} element={<TeamPage />} />
+        {/* teams */}
+        <Route path={"/search-team"} element={<SearchTeamPage />} />
+        <Route path={"/team"} element={<TeamDetailPage />} />
 
-      {/* errors */}
-      <Route path={"/404"} element={<Error404Page />} />
-      
-      {/* other */}
-      <Route path={"/favorites"} element={<FavoritesPage />} />
+        {/* errors */}
+        <Route path={"/404"} element={<Error404Page />} />
+
+        {/* other */}
+        <Route path={"/favorites"} element={<FavoritesPage />} />
+      </Route>
     </Routes>
   );
 };
